@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #fff8f1;
+  --sand: #f6e8d7;
+  --clay: #a32e0c;
+  --clay-deep: #7e2005;
+  --ink: #2b211b;
+  --muted: #8a7a6e;
+}
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: ui-sans-system, -apple-system, "Segoe UI", Inter, system-ui, sans-serif;
+}
+
+.font-serif-display {
+  font-family: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.hero-desert {
+  background:
+    radial-gradient(1200px 500px at 70% -10%, #ffe8c8 0%, transparent 60%),
+    radial-gradient(900px 420px at 10% 0%, #ffe3c2 0%, transparent 55%),
+    linear-gradient(180deg, #fffaf3 0%, #fff1de 45%, #f7d9b0 78%, #e9a878 100%);
+}
+
+.card-soft {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(163,46,12,0.12);
+  box-shadow: 0 24px 60px rgba(90,30,5,0.12);
+}
+
+.btn-clay {
+  background: linear-gradient(180deg, #b23a10, #8e2405);
+  color: white;
+  box-shadow: 0 12px 28px rgba(163,46,12,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+  transition: transform .15s ease, filter .15s ease;
+}
+.btn-clay:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+.input-warm {
+  background: #f7ecdc;
+  border: 1px solid transparent;
+}
+.input-warm:focus {
+  outline: none;
+  border-color: var(--clay);
+  background: white;
+}
+
+.chart-ring {
+  background: conic-gradient(from 0deg, #fffdf7, #fef3e2, #fffdf7);
+}
+
+.dune {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background:
+    radial-gradient(600px 180px at 20% 100%, #c96a2e 0%, transparent 70%),
+    radial-gradient(700px 200px at 55% 100%, #e49a5a 0%, transparent 70%),
+    radial-gradient(800px 220px at 85% 100%, #b85a24 0%, transparent 70%);
+  opacity: .55;
+  pointer-events: none;
+}
+
+.prose-astro p { margin-bottom: .9rem; line-height: 1.7; }
+.blur-lock { filter: blur(6px); user-select: none; pointer-events: none; }
